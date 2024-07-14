@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummyy</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- =========>aside bar<========== -->
+    <aside>
+        <div class="left-aside position-fixed start-0 top-0 bottom-0 d-flex  min-vh-100">
+            <div class="b-nav-sec h-100 text-white d-flex flex-column justify-content-between ">
+                <div class="overflow-hidden">
+                    <ul class="list-unstyled overflow-hidden">
+                        <li onclick="getSearchSec() ">Search</li>
+                        <li onclick="getCategories() ;removeSearchSec()">Categories</li>
+                        <li onclick="getArea() ;removeSearchSec()">Area</li>
+                        <li onclick="getIngredients() ;removeSearchSec()">Ingredients</li>
+                        <li onclick="displayContactSec()">Contact Us</li>
+                    </ul>
+                </div>
+                <div class="copyRight position-fixed d-none">
+                    <div class="nav-social-icon">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <p class="copyRight-text ">Copyright Â© 2019 All Rights <br>
+                        Reserved.</p>
+                </div>
+
+            </div>
+            <div
+                class="w-nav-sec h-100 text-black bg-white d-flex flex-column justify-content-between align-items-center py-4 px-2 ">
+                <img src="images/logo.png" class="nav-logo" alt="">
+                <i class="fa-solid fa-2x fa-align-justify open-close-btn "></i>
+                <div class="d-flex flex-column gap-1">
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- =========>search section<========== -->
+    <div class="container">
+        <div class="row g-4 mx-5  py-4 d-none position-sticky z-3 " id="searchSec">
+            <div class="col-md-6">
+                <input type="text" class="form-control bg-transparent  text-light" placeholder="Search By Name"
+                    id="nameSearch" onkeyup="searchByMealName(this.value)">
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control bg-transparent  text-light" placeholder="Search By First Letter"
+                    id="letterSearch" onkeyup="searchByMealFirstletter(this.value)" maxlength="1">
+            </div>
+        </div>
+
+    </div>
+    <!-- =========>Home section<========== -->
+    <section class="home " id="home">
+        <div id="containerSpinner"
+            class="containerSpinner position-fixed d-flex top-0 start-0 end-0 bottom-0 justify-content-center align-items-center bg-black d-none ">
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+        <div class="container">
+            <div class="row g-4 py-5" id="homeMeals">
+            </div>
+            <!-- <div class="row py-5 g-4 d-none " id="recipeDetails">
+            </div> -->
+        </div>
+    </section>
+    <!-- =========>Loading<========== -->
+    <div id="LoadingSpinner"
+        class="bg-black  d-flex justify-content-center align-items-center position-fixed top-0 bottom-0 start-0 end-0">
+        <i class="fa-solid fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+
+
+
+
+    <!-- =========>js links<========== -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+
+
+</body>
+
+</html>

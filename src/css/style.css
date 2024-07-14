@@ -1,0 +1,110 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0D0D0D;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+#LoadingSpinner {
+    z-index: 9999;
+}
+
+#containerSpinner {
+    z-index: 1;
+}
+
+/* ///////////////////////// */
+/* Home */
+.meal-img {
+    position: relative;
+}
+
+.meal-overlay,
+.category-overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    transition: all 0.5s;
+}
+
+.meal-img:hover .meal-overlay,
+.categDiv:hover .category-overlay {
+    top: 0;
+}
+
+
+.recipeIngredient li {
+    display: inline-block;
+}
+
+/* /////////////////////////////////// */
+/* Aside nav */
+
+.left-aside {
+    background-color: #0D0D0D;
+    z-index: 55;
+}
+
+.nav-logo {
+    width: 50px;
+}
+
+.b-nav-sec {
+    width: 0px;
+    overflow: hidden;
+}
+
+.b-nav-sec ul {
+    height: 87%;
+    width: 260px;
+}
+
+.b-nav-sec ul li {
+    position: relative;
+    top: 300px;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.copyRight {
+    min-width: 200px;
+    max-height: 70px;
+    display: block;
+    bottom: 35px;
+    left: 25px;
+
+}
+
+/* /////////////////////////////////// */
+/* =========>categories<==========  */
+
+.area-sec {
+    color: #F9F6F6;
+}
+
+
+.col-md-3 {
+    cursor: pointer;
+}
+
+#searchSec ::placeholder {
+    color: #7d7a7a;
+}
+
+#searchSec {
+    padding-inline: 30px;
+}
+
+/* ///////////////////////// */
